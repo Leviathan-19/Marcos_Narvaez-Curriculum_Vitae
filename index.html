@@ -68,7 +68,6 @@
                 <div class="hero-image">
                     <div class="image-wrapper">
                         <img src="cv-marcos-narvaez/assets/profile/profile-placeholder.jpg" alt="Marcos Narváez" id="profile-img">
-                        <div class="image-overlay">Agregar fotografía</div>
                     </div>
                 </div>
             </div>
@@ -169,16 +168,10 @@
         <section id="certificaciones" class="certificates section-padding">
             <div class="container">
                 <h2 class="section-title">Certificaciones</h2>
-                <div class="certificate-card card">
-                    <div class="cert-icon">
-                        <i class="devicon-amazonwebservices-plain-wordmark"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h3>Cloud Foundations</h3>
-                        <h4>AWS Academy</h4>
-                        <span class="date">Enero 2026</span>
-                    </div>
-                    <a href="#" class="btn btn-outline btn-sm">Ver credencial</a>
+                <div class="certificate-card card" style="display: flex; justify-content: center; text-align: center;">
+                    <!-- Credly Embed -->
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6ae29a6d-9eb9-4701-8cbd-e6a4751166c9" data-share-badge-host="https://www.credly.com"></div>
+                    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
                 </div>
             </div>
         </section>
@@ -187,34 +180,22 @@
         <section id="contacto" class="contact section-padding">
             <div class="container">
                 <h2 class="section-title">Contacto</h2>
-                <div class="contact-content card">
-                    <p class="contact-intro">¿Interesado en trabajar juntos? Contáctame a través de los siguientes medios:</p>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <div>
-                                <strong>Email</strong>
-                                <a href="mailto:msnarvaez19@hotmail.com">msnarvaez19@hotmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <div>
-                                <strong>Teléfono</strong>
-                                <a href="tel:+5930963637259">+593 0963637259</a>
-                            </div>
-                        </div>
+                <div class="contact-content card" style="justify-content: space-around;">
+                    <div class="contact-qr-wrap">
+                        <img src="cv-marcos-narvaez/assets/profile/whatsapp-qr.jpeg" alt="WhatsApp QR Code" class="qr-image">
+                        <p class="qr-text">Escríbeme por WhatsApp</p>
                     </div>
-                    <div class="contact-actions">
-                        <a href="mailto:msnarvaez19@hotmail.com" class="btn btn-primary">Enviar email</a>
-                        <div class="social-links-container">
-                            <a href="#" id="github-link-contact" class="social-btn" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
-                                <i class="devicon-github-original"></i> GitHub
-                            </a>
-                            <a href="#" id="linkedin-link-contact" class="social-btn" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-                                <i class="devicon-linkedin-plain"></i> LinkedIn
-                            </a>
-                        </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <a href="#" id="linkedin-link-contact" class="social-btn" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; font-size: 1.2rem; font-weight: 500;">
+                            <i class="devicon-linkedin-plain" style="font-size: 4rem; margin-bottom: 0.5rem; color: #0077b5;"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <a href="#" id="github-link-contact" class="social-btn" target="_blank" aria-label="GitHub" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; font-size: 1.2rem; font-weight: 500;">
+                            <i class="devicon-github-original" style="font-size: 4rem; margin-bottom: 0.5rem;"></i>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -223,7 +204,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Marcos Narváez. Desarrollado con HTML, CSS y JS.</p>
+            <p>&copy; 2026 Marcos Narváez.</p>
         </div>
     </footer>
 

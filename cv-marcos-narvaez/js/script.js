@@ -55,45 +55,134 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- 4. Technologies Data ---
-    const technologies = [
-        // Lenguajes
-        { name: 'Python', icon: 'devicon-python-plain' },
-        { name: 'C#', icon: 'devicon-csharp-plain' },
-        { name: 'JavaScript', icon: 'devicon-javascript-plain' },
-        { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-        { name: 'Java', icon: 'devicon-java-plain' },
-        { name: 'SQL', icon: 'devicon-azuresqldatabase-plain' },
-        
-        // Backend
-        { name: 'ASP.NET Core', icon: 'devicon-dotnetcore-plain' },
-        // { name: 'Entity Framework Core', icon: 'devicon-dot-net-plain-wordmark' }, // No exact devicon, using fallback
-        { name: 'REST APIs', icon: 'devicon-express-original' }, // Representation
-        // MVC, JWT, Microservicios are concepts, we might skip icons or use generic ones
-        
-        // Frontend / Mobile
-        { name: 'HTML5', icon: 'devicon-html5-plain' },
-        { name: 'CSS3', icon: 'devicon-css3-plain' },
-        { name: 'Angular', icon: 'devicon-angularjs-plain' },
-        { name: 'React Native', icon: 'devicon-react-original' },
-        
-        // Database / Cloud / Tools
-        { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
-        { name: 'Supabase', icon: 'devicon-supabase-plain' },
-        { name: 'Docker', icon: 'devicon-docker-plain' },
-        { name: 'Git', icon: 'devicon-git-plain' },
-        { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark' }
+    const techCategories = [
+        {
+            category: "Lenguajes",
+            items: [
+                { name: 'Python', icon: 'devicon-python-plain' },
+                { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+                { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+                { name: 'C#', icon: 'devicon-csharp-plain' },
+                { name: 'Dart', icon: 'devicon-dart-plain' }
+            ]
+        },
+        {
+            category: "Frontend",
+            items: [
+                { name: 'Angular', icon: 'devicon-angularjs-plain' },
+                { name: 'React', icon: 'devicon-react-original' },
+                { name: 'React Native', icon: 'devicon-react-original' },
+                { name: 'Expo', icon: 'devicon-react-original' }
+            ]
+        },
+        {
+            category: "Backend",
+            items: [
+                { name: 'Node.js', icon: 'devicon-nodejs-plain' },
+                { name: 'Express.js', icon: 'devicon-express-original' },
+                { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+                { name: '.NET 8', icon: 'devicon-dotnetcore-plain' },
+                { name: 'ASP.NET Core', icon: 'devicon-dotnetcore-plain' },
+                { name: 'Prisma', icon: 'devicon-prisma-original' } // Fallback generic if not found
+            ]
+        },
+        {
+            category: "Bases de datos",
+            items: [
+                { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
+                { name: 'Supabase', icon: 'devicon-supabase-plain' },
+                { name: 'MySQL', icon: 'devicon-mysql-plain' },
+                { name: 'SQLite', icon: 'devicon-sqlite-plain' }
+            ]
+        },
+        {
+            category: "Cloud & DevOps",
+            items: [
+                { name: 'Supabase', icon: 'devicon-supabase-plain' },
+                { name: 'Render', icon: 'devicon-amazonwebservices-plain-wordmark' },
+                { name: 'Railway', icon: 'devicon-amazonwebservices-plain-wordmark' },
+                { name: 'EAS', icon: 'devicon-react-original' },
+                { name: 'GitHub', icon: 'devicon-github-original' },
+                { name: 'GitHub Actions', icon: 'devicon-github-original' },
+                { name: 'Docker', icon: 'devicon-docker-plain' }
+            ]
+        },
+        {
+            category: "Mobile",
+            items: [
+                { name: 'React Native', icon: 'devicon-react-original' },
+                { name: 'Expo', icon: 'devicon-react-original' },
+                { name: 'Flutter', icon: 'devicon-flutter-plain' },
+                { name: 'Android SDK', icon: 'devicon-android-plain' }
+            ]
+        },
+        {
+            category: "IA & Computer Vision",
+            items: [
+                { name: 'Python', icon: 'devicon-python-plain' },
+                { name: 'PyTorch', icon: 'devicon-pytorch-plain' },
+                { name: 'YOLO', icon: 'devicon-python-plain' },
+                { name: 'DINOv2', icon: 'devicon-python-plain' },
+                { name: 'embeddings', icon: 'devicon-python-plain' }
+            ]
+        },
+        {
+            category: "GIS & Geolocation",
+            items: [
+                { name: 'MapLibre', icon: 'devicon-javascript-plain' },
+                { name: 'OpenFreeMap', icon: 'devicon-javascript-plain' },
+                { name: 'OpenStreetMap', icon: 'devicon-javascript-plain' },
+                { name: 'GPS', icon: 'devicon-javascript-plain' },
+                { name: 'Expo Location', icon: 'devicon-react-original' }
+            ]
+        },
+        {
+            category: "Tools",
+            items: [
+                { name: 'VS Code', icon: 'devicon-vscode-plain' },
+                { name: 'Visual Studio', icon: 'devicon-visualstudio-plain' },
+                { name: 'Android Studio', icon: 'devicon-androidstudio-plain' },
+                { name: 'Git', icon: 'devicon-git-plain' },
+                { name: 'GitHub', icon: 'devicon-github-original' },
+                { name: 'Antigravity', icon: 'devicon-google-plain' }
+            ]
+        }
     ];
 
     const techContainer = document.getElementById('tech-container');
     
-    technologies.forEach(tech => {
-        const div = document.createElement('div');
-        div.className = 'tech-item';
-        div.innerHTML = `
-            <i class="${tech.icon}"></i>
-            <span>${tech.name}</span>
-        `;
-        techContainer.appendChild(div);
+    techCategories.forEach(categoryData => {
+        // Create category wrapper
+        const sectionWrapper = document.createElement('div');
+        sectionWrapper.className = 'tech-category-section';
+        sectionWrapper.style.marginBottom = '3rem';
+
+        // Create category title
+        const title = document.createElement('h3');
+        title.className = 'tech-category-title';
+        title.textContent = categoryData.category;
+        title.style.marginBottom = '1.5rem';
+        title.style.color = 'var(--text-primary)';
+        title.style.borderBottom = '1px solid var(--border-color)';
+        title.style.paddingBottom = '0.5rem';
+
+        // Create grid for items
+        const grid = document.createElement('div');
+        grid.className = 'tech-grid';
+
+        categoryData.items.forEach(tech => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'tech-item';
+            itemDiv.innerHTML = `
+                <i class="${tech.icon}"></i>
+                <span>${tech.name}</span>
+            `;
+            grid.appendChild(itemDiv);
+        });
+
+        sectionWrapper.appendChild(title);
+        sectionWrapper.appendChild(grid);
+        techContainer.appendChild(sectionWrapper);
     });
 
     // --- 5. Projects Data ---
@@ -102,31 +191,23 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Client-Mapper-EC",
             description: "Aplicación móvil orientada a la gestión de clientes, establecimientos, rutas y visitas comerciales. Utiliza arquitectura offline-first.",
             technologies: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL", "PowerSync", "SQLite", "MapLibre"],
-            image: "", // Placeholder trigger
+            image: "cv-marcos-narvaez/assets/projects/ClientMapperEC.png",
             github: "https://github.com/Leviathan-19/Client-Mapper-EC",
             demo: ""
-        },
-        {
-            title: "Ivanseg Extintores",
-            description: "Sistema para la gestión y seguimiento de clientes, establecimientos, mantenimientos y visitas relacionadas con el mantenimiento de extintores.",
-            technologies: ["Angular", "Node.js", "Express", "Prisma", "PostgreSQL", "Supabase", "Render"],
-            image: "",
-            github: "#", // Add URL if available
-            demo: "#"
         },
         {
             title: "PetSense",
             description: "Proyecto enfocado en el análisis de emociones en perros mediante inteligencia artificial y visión por computador.",
             technologies: ["Python", "YOLO", "DINOv2", "Machine Learning"],
-            image: "",
+            image: "cv-marcos-narvaez/assets/projects/PetSense.jpg",
             github: "https://github.com/PetSense-Technologies/PetSense",
             demo: ""
         },
         {
             title: "SaveGogGames",
-            description: "Proyecto orientado a obtener y organizar información de videojuegos mediante automatización web scraping.",
+            description: "Proyecto orientado a obtener y organizar información del sitio web gog-games-to mediante técnicas de automatización web scraping.",
             technologies: ["TypeScript", "Node.js", "Playwright", "Web Scraping"],
-            image: "",
+            image: "cv-marcos-narvaez/assets/projects/gog-games.webp",
             github: "#",
             demo: ""
         }

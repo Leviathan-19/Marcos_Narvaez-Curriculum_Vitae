@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. Social Links Configuration ---
     const socialLinks = {
-        github: "https://github.com/MarcosNarvaez", // Replace with real URL if known, assuming standard format or just github.com
-        linkedin: "https://linkedin.com/in/MarcosNarvaez" // Replace with real URL
+        github: "https://github.com/Leviathan-19", // Replace with real URL if known, assuming standard format or just github.com
+        linkedin: "https://www.linkedin.com/in/marcos-narváez-guevara-2028113b0"
     };
 
     // Apply links to DOM

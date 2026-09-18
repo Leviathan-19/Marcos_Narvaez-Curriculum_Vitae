@@ -99,8 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             category: "Cloud & DevOps",
             items: [
                 { name: 'Supabase', icon: 'devicon-supabase-plain' },
-                { name: 'Render', icon: 'devicon-amazonwebservices-plain-wordmark' },
-                { name: 'Railway', icon: 'devicon-amazonwebservices-plain-wordmark' },
+                { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark' },
                 { name: 'EAS', icon: 'devicon-react-original' },
                 { name: 'GitHub', icon: 'devicon-github-original' },
                 { name: 'GitHub Actions', icon: 'devicon-github-original' },

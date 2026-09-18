@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV y portfolio de Marcos Narváez, Software Developer e IT Support.">
+    <title>Marcos Narváez | Software Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Devicon / Simple Icons for tech stack -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="nav-content container">
+            <a href="#" class="logo">MN.</a>
+            <button class="menu-toggle" aria-label="Toggle menu" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                        <span class="icon">☀</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero section-padding">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="subtitle">Available for opportunities <span class="status-dot"></span></p>
+                    <h1>Hola, soy <strong>Marcos Narváez</strong></h1>
+                    <h2>Software Developer | IT Support</h2>
+                    <p class="description">
+                        Me interesa la automatización de procesos, el desarrollo de aplicaciones y la optimización de sistemas tecnológicos.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contactarme</a>
+                        <div class="social-links-container">
+                            <a href="#" id="github-link-hero" class="social-btn" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                                <i class="devicon-github-original"></i>
+                            </a>
+                            <a href="#" id="linkedin-link-hero" class="social-btn" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                                <i class="devicon-linkedin-plain"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="assets/profile/profile-placeholder.jpg" alt="Marcos Narváez" id="profile-img">
+                        <div class="image-overlay">Agregar fotografía</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title">Sobre mí</h2>
+                <div class="about-content">
+                    <p>
+                        Estudié <strong>Ingeniería en Sistemas de la Información</strong> y cuento con experiencia en soporte técnico y desarrollo de software.
+                    </p>
+                    <p>
+                        Soy un apasionado por la <strong>automatización de procesos</strong> y la optimización de sistemas tecnológicos. Me caracterizo por ser autodidacta, resolutivo y siempre orientado al <strong>aprendizaje continuo</strong>. Disfruto enfrentando nuevos desafíos que me permitan mejorar mis habilidades y aportar valor a los equipos de trabajo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia -->
+        <section id="experiencia" class="experience section-padding">
+            <div class="container">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="timeline">
+                    <!-- Helpdesk -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <h3>Helpdesk</h3>
+                            <h4>Ituran Ecuador</h4>
+                            <span class="timeline-date">2025 — 6 meses</span>
+                            <ul>
+                                <li>Gestión y resolución de incidencias técnicas de software y hardware.</li>
+                                <li>Soporte técnico a empleados de distintas áreas.</li>
+                                <li>Diagnóstico y mantenimiento de equipos.</li>
+                                <li>Atención y seguimiento de tickets internos.</li>
+                                <li>Apoyo en la optimización de procesos tecnológicos internos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Desarrollador de Software -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <h3>Desarrollador de software</h3>
+                            <h4>IdeasGroup</h4>
+                            <span class="timeline-date">2024 — 2 meses</span>
+                            <ul>
+                                <li>Desarrollo de un MVP para integración con la plataforma Strateggie.</li>
+                                <li>Desarrollo backend utilizando EF Core 8.</li>
+                                <li>Desarrollo frontend utilizando Angular.</li>
+                                <li>Trabajo colaborativo remoto.</li>
+                                <li>Participación en análisis de requerimientos técnicos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías -->
+        <section id="tecnologias" class="technologies section-padding">
+            <div class="container">
+                <h2 class="section-title">Tecnologías</h2>
+                <div class="tech-grid" id="tech-container">
+                    <!-- Renderizado dinámico desde JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos" class="projects section-padding">
+            <div class="container">
+                <h2 class="section-title">Proyectos destacados</h2>
+                <div class="projects-grid" id="projects-container">
+                    <!-- Renderizado dinámico desde JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Formación -->
+        <section id="formacion" class="education section-padding">
+            <div class="container">
+                <h2 class="section-title">Formación</h2>
+                <div class="education-card card">
+                    <h3>Ingeniería en Sistemas de la Información</h3>
+                    <h4>Universidad Central del Ecuador</h4>
+                    <div class="education-meta">
+                        <span class="badge">Egresado</span>
+                        <span class="date">2020 - Actualidad</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificaciones -->
+        <section id="certificaciones" class="certificates section-padding">
+            <div class="container">
+                <h2 class="section-title">Certificaciones</h2>
+                <div class="certificate-card card">
+                    <div class="cert-icon">
+                        <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Cloud Foundations</h3>
+                        <h4>AWS Academy</h4>
+                        <span class="date">Enero 2026</span>
+                    </div>
+                    <a href="#" class="btn btn-outline btn-sm">Ver credencial</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content card">
+                    <p class="contact-intro">¿Interesado en trabajar juntos? Contáctame a través de los siguientes medios:</p>
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:msnarvaez19@hotmail.com">msnarvaez19@hotmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <a href="tel:+5930963637259">+593 0963637259</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="mailto:msnarvaez19@hotmail.com" class="btn btn-primary">Enviar email</a>
+                        <div class="social-links-container">
+                            <a href="#" id="github-link-contact" class="social-btn" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                                <i class="devicon-github-original"></i> GitHub
+                            </a>
+                            <a href="#" id="linkedin-link-contact" class="social-btn" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                                <i class="devicon-linkedin-plain"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Marcos Narváez. Desarrollado con HTML, CSS y JS.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
